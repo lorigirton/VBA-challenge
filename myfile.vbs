@@ -131,7 +131,7 @@ Position = WorksheetFunction.Match(ws.Cells(3, 17).Value, ws.Range("K2:K" & summ
 ws.Cells(3, 16).Value = ws.Cells(Position + 1, 9).Value
 
 'Populate Greatest Total Volume
-ws.Cells(4, 17).Value = WorksheetFunction.Max(ws.Range("L2:L" & summary_table_row))
+ws.Cells(4, 17).Value = WorksheetFunction.Min(ws.Range("L2:L" & summary_table_row))
 Position = WorksheetFunction.Match(ws.Cells(4, 17).Value, ws.Range("L2:L" & summary_table_row), 0)
 ws.Cells(4, 16).Value = ws.Cells(Position + 1, 9).Value
 
